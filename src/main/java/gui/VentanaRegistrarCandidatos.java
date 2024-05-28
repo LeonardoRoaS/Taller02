@@ -32,13 +32,13 @@ public class VentanaRegistrarCandidatos extends Ventana {
     // BOTONES YA HECHOS
     private void generarBotonRegistrar() {
         String textoBoton= "Registrar Candidato";
-        this.botonRegistrar = super.generarBoton(textoBoton, 75, 400, 150, 20);
+        this.botonRegistrar = super.generarBoton(textoBoton, 50, 400, 250, 20);
         this.add(this.botonRegistrar);
         this.botonRegistrar.addActionListener(this);
     }
     private void generarBotonCancelar() {
         String textoBotonCancelar = "Cancelar";
-        this.botonCancelar = super.generarBoton(textoBotonCancelar, 275, 400, 150, 20);
+        this.botonCancelar = super.generarBoton(textoBotonCancelar, 300, 400, 150, 20);
         this.add(this.botonCancelar);
         this.botonCancelar.addActionListener(this);
     }

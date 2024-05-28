@@ -46,7 +46,7 @@ public class VentanaBienvenida extends Ventana {
     }
 
     private void generarBotonRegistroVotantes() {
-        String textoBoton = "Registrar Votantes";
+        String textoBoton = "Ingreso Votantes";
         this.botonRegistrarVotantes = super.generarBoton(textoBoton, 230, 260, 175, 40);
         this.add(this.botonRegistrarVotantes);
         this.botonRegistrarVotantes.addActionListener(this);
@@ -65,7 +65,7 @@ public class VentanaBienvenida extends Ventana {
     public void actionPerformed(ActionEvent e) {
         //ACCION BOTON AGREGAR PRODUCTO
         if (e.getSource() == this.botonGestionElecciones) {
-            //VentanaGestionarElecciones gestionElecciones = new VentanaGestionarElecciones();
+            VentanaGestionarElecciones gestionElecciones = new VentanaGestionarElecciones();
             this.dispose();
         }
         //ACCION BOTON BUSCAR PRODUCTO
