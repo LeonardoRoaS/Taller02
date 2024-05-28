@@ -1,11 +1,18 @@
 package modelo.data;
 
 public class Votante {
-    private String contacto, preferenciaPolitica;
+    private String rut, contacto, preferenciaPolitica;
 
-    public Votante (String contacto, String preferenciaPolitica){
-        this.contacto = contacto;
-        this.preferenciaPolitica = preferenciaPolitica;
+    public Votante (String rut){
+        this.rut=rut;
+    }
+
+    public String getRut() {
+        return rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
     }
 
     public String getContacto() {

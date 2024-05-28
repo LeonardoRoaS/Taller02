@@ -3,14 +3,17 @@ package gui;
 import controller.CandidatoController;
 import controller.ProductoController;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+
 public class VentanaRegistrarCandidatos extends Ventana {
     private JLabel textoEncabezado, textoNombre, textoPartidoPolitico, textoCargo;
     private JTextField campoNombre, campoPartidoPolitico, campoCargo;
     private JButton botonRegistrar, botonCancelar;
 
 
-    public VentanaAgregarProducto(){
-        super("Agregar Producto", 500, 520);
+    public VentanaRegistrarCandidatos(){
+        super("Registrar Candidatos", 500, 520);
         generarElementosVentana();
     }
     private void generarElementosVentana() {
@@ -22,7 +25,7 @@ public class VentanaRegistrarCandidatos extends Ventana {
         generarCampoCargo();
     }
     private void generarEncabezado() {
-        String textoCabecera = "Registro de Productos";
+        String textoCabecera = "Registro de Candidatos";
         super.generarJLabelEncabezado(this.textoEncabezado, textoCabecera, 100, 10, 290, 50);
 
     }
@@ -56,8 +59,8 @@ public class VentanaRegistrarCandidatos extends Ventana {
     }
     private void generarCampoCargo(){
         String textoCargo = "Cargo aspirante :";
-        super.generarJLabel(this.campoCargo,textoCargo,20,180,150,20);
-        this.campoCargo = super.generarJFormattedTextField(super.generarFormato(0),200,180,250,20);
+        super.generarJLabel(this.textoCargo,textoCargo,20,180,150,20);
+        this.campoCargo = super.generarJTextField(200,180,250,20);
         this.add(this.campoCargo);
     }
 
@@ -79,13 +82,13 @@ public class VentanaRegistrarCandidatos extends Ventana {
 
         if (e.getSource() == this.botonRegistrar) {
             try {
-                if(agregarProducto()) {
-                    JOptionPane.showMessageDialog(this,"Producto registrado correctamente");
+                if(registrarCandidato()) {
+                    JOptionPane.showMessageDialog(this,"Candidato registrado correctamente");
                     VentanaBienvenida ventanaBienvenida = new VentanaBienvenida();
                     this.dispose();
                 }
                 else{
-                    JOptionPane.showMessageDialog(this,"Producto ya ingresado o datos incorrectos");
+                    JOptionPane.showMessageDialog(this,"Candidato ya ingresado o datos incorrectos");
                 }
             } catch (ClassNotFoundException ex) {
                 ex.printStackTrace();

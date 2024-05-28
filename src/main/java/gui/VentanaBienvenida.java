@@ -65,25 +65,24 @@ public class VentanaBienvenida extends Ventana {
     public void actionPerformed(ActionEvent e) {
         //ACCION BOTON AGREGAR PRODUCTO
         if (e.getSource() == this.botonGestionElecciones) {
-            VentanaGestionarElecciones gestionElecciones = new VentanaGestionarElecciones();
+            //VentanaGestionarElecciones gestionElecciones = new VentanaGestionarElecciones();
             this.dispose();
         }
         //ACCION BOTON BUSCAR PRODUCTO
         if (e.getSource() == this.botonRegistrarCandidatos) {
-                VentanaRegistrarCandidatos registrarCandidatos = new VentanaRegistrarCandidatos();
-                this.dispose();
-            }
-            //ACCION BOTON ELIMINAR PRODUCTO
-            if (e.getSource() == this.botonRegistrarVotantes) {
-                    VentanaRegistrarVotantes registrarVotantes = new VentanaRegistrarVotantes();
-                }
-                this.dispose();
-            }
-            // ACCION BOTON SALIDA
-            if (e.getSource() == this.botonSalida) {
-                this.dispose();
-                System.exit(0);
-            }
+            VentanaRegistrarCandidatos registrarCandidatos = new VentanaRegistrarCandidatos();
+            this.dispose();
+        }
+
+        //ACCION BOTON ELIMINAR PRODUCTO
+        if (e.getSource() == this.botonRegistrarVotantes) {
+            VentanaRegistrarVotantes registrarVotantes = new VentanaRegistrarVotantes();
+            this.dispose();
+        }
+        // ACCION BOTON SALIDA
+        if (e.getSource() == this.botonSalida) {
+            this.dispose();
+            System.exit(0);
         }
     }
 }

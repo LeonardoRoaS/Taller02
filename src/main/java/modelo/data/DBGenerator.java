@@ -39,13 +39,13 @@ public class DBGenerator {
     }
 
     private static void crearTablaCandidatos(DSLContext create){
-        create.createTableIfNotExists("Candidatos").column("nombre",VARCHAR(100))
+        create.createTableIfNotExists("Candidatos").column("Nombre",VARCHAR(100))
                 .column("PartidoPolitico",VARCHAR(50))
                 .column("Cargo",VARCHAR(50))
                 .constraint(primaryKey("nombre")).execute();
     }
     private static void crearTablaVotantes(DSLContext create){
-        create.createTableIfNotExists("Votantes").column("nombre",VARCHAR(100))
+        create.createTableIfNotExists("Votantes").column("Nombre",VARCHAR(100))
                 .column("Contacto",VARCHAR(50))
                 .column("PreferenciaPolitica",VARCHAR(50))
                 .constraint(primaryKey("nombre")).execute();
